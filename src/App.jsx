@@ -34,9 +34,25 @@ const Skeleton = () => <div className="h-24 animate-pulse rounded-xl bg-slate-20
 
 const fetchJson = async (url, options) => {
   const response = await fetch(url, options)
-  const data = await response.json()
-  if (!response.ok) throw new Error(data.error || 'Request failed')
-  return data
+  const contentType = response.headers.get('content-type') || ''
+  const isJson = contentType.includes('application/json')
+  const payload = isJson ? await response.json() : await response.text()
+
+  if (!response.ok) {
+    const message =
+      isJson && payload && typeof payload === 'object'
+        ? payload.error || 'Request failed'
+        : typeof payload === 'string' && payload.trim()
+          ? payload.trim()
+          : 'Request failed'
+    throw new Error(message)
+  }
+
+  if (!isJson) {
+    throw new Error('Server returned a non-JSON response.')
+  }
+
+  return payload
 }
 
 function App() {
