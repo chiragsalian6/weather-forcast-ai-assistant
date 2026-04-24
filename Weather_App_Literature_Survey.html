@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App - Complete Literature Survey</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 40px;
+            font-size: 12pt;
+        }
+        h1 {
+            font-size: 24pt;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 18pt;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            page-break-after: avoid;
+        }
+        h3 {
+            font-size: 14pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        h4 {
+            font-size: 12pt;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        .code {
+            font-family: 'Courier New', monospace;
+            background-color: #f8f8f8;
+            padding: 2px 4px;
+            font-size: 10pt;
+        }
+        .center {
+            text-align: center;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        .toc {
+            margin: 20px 0;
+        }
+        .toc ul {
+            list-style-type: none;
+        }
+        .toc li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Weather Forecast App - Complete Literature Survey</h1>
+
+<div class="center">
+    <p><strong>Document Version:</strong> 1.0</p>
+    <p><strong>Date:</strong> April 18, 2026</p>
+    <p><strong>Application:</strong> Weather Forecast Pro v0.0.0</p>
+</div>
+
+<h2>Table of Contents</h2>
+<div class="toc">
+    <ol>
+        <li><a href="#executive-summary">Executive Summary</a></li>
+        <li><a href="#introduction">Introduction and Purpose</a>
+            <ol>
+                <li><a href="#app-overview">Application Overview</a></li>
+                <li><a href="#target-users">Target Users</a></li>
+            </ol>
+        </li>
+        <li><a href="#tech-stack">Technology Stack and Architecture</a>
+            <ol>
+                <li><a href="#core-framework">Core Framework and Build Tools</a></li>
+                <li><a href="#styling-framework">Styling Framework</a></li>
+                <li><a href="#visualization-libs">Visualization Libraries</a></li>
+                <li><a href="#code-quality">Code Quality Tools</a></li>
+            </ol>
+        </li>
+        <li><a href="#system-architecture">System Architecture</a>
+            <ol>
+                <li><a href="#high-level-arch">High-Level Architecture Diagram</a></li>
+                <li><a href="#component-arch">Component Architecture</a></li>
+                <li><a href="#data-flow">Data Flow Architecture</a></li>
+            </ol>
+        </li>
+        <li><a href="#api-integration">API Integration and Data Management</a>
+            <ol>
+                <li><a href="#openweather-api">OpenWeatherMap API Integration</a></li>
+                <li><a href="#api-functions">API Functions and Data Structure</a></li>
+                <li><a href="#data-processing">Data Processing Pipeline</a></li>
+            </ol>
+        </li>
+        <li><a href="#state-management">State Management Strategy</a>
+            <ol>
+                <li><a href="#state-distribution">State Distribution</a></li>
+                <li><a href="#state-persistence">State Persistence</a></li>
+            </ol>
+        </li>
+        <li><a href="#ui-design">User Interface and Design</a>
+            <ol>
+                <li><a href="#design-system">Design System</a></li>
+                <li><a href="#responsive-design">Responsive Design</a></li>
+                <li><a href="#animation-strategy">Animation Strategy</a></li>
+            </ol>
+        </li>
+        <li><a href="#advanced-features">Advanced Features</a>
+            <ol>
+                <li><a href="#geolocation">Geolocation Integration</a></li>
+                <li><a href="#lazy-loading">Lazy Loading Strategy</a></li>
+                <li><a href="#radar-map">Interactive Radar Map</a></li>
+                <li><a href="#temp-trend">24-Hour Temperature Trend</a></li>
+                <li><a href="#advanced-metrics">Advanced Metrics Display</a></li>
+            </ol>
+        </li>
+        <li><a href="#performance">Performance Optimizations</a>
+            <ol>
+                <li><a href="#rendering-opt">Rendering Optimizations</a></li>
+                <li><a href="#bundle-opt">Bundle Optimization</a></li>
+                <li><a href="#network-opt">Network Optimizations</a></li>
+            </ol>
+        </li>
+        <li><a href="#accessibility">Accessibility Features</a>
+            <ol>
+                <li><a href="#semantic-html">Semantic HTML</a></li>
+                <li><a href="#aria-attributes">ARIA Attributes</a></li>
+                <li><a href="#visual-accessibility">Visual Accessibility</a></li>
+                <li><a href="#keyboard-nav">Keyboard Navigation</a></li>
+            </ol>
+        </li>
+        <li><a href="#error-handling">Error Handling and Resilience</a>
+            <ol>
+                <li><a href="#error-types">Error Types and Handling</a></li>
+                <li><a href="#error-messages">Error Messages</a></li>
+            </ol>
+        </li>
+        <li><a href="#development">Development and Deployment</a>
+            <ol>
+                <li><a href="#build-process">Build Process</a></li>
+                <li><a href="#config-files">Configuration Files</a></li>
+            </ol>
+        </li>
+        <li><a href="#security">Security Considerations</a>
+            <ol>
+                <li><a href="#api-key-mgmt">API Key Management</a></li>
+                <li><a href="#input-validation">Input Validation</a></li>
+                <li><a href="#xss-prevention">XSS Prevention</a></li>
+            </ol>
+        </li>
+        <li><a href="#browser-compatibility">Browser Compatibility and Support</a>
+            <ol>
+                <li><a href="#target-browsers">Target Browsers</a></li>
+                <li><a href="#tech-requirements">Technology Requirements</a></li>
+                <li><a href="#polyfills">Polyfills</a></li>
+            </ol>
+        </li>
+        <li><a href="#testing-strategy">Testing Strategy (Recommended)</a>
+            <ol>
+                <li><a href="#unit-testing">Unit Testing</a></li>
+                <li><a href="#integration-testing">Integration Testing</a></li>
+                <li><a href="#e2e-testing">E2E Testing</a></li>
+            </ol>
+        </li>
+        <li><a href="#future-enhancements">Future Enhancement Opportunities</a>
+            <ol>
+                <li><a href="#feature-enhancements">Feature Enhancements</a></li>
+                <li><a href="#performance-enhancements">Performance Enhancements</a></li>
+                <li><a href="#architecture-improvements">Architecture Improvements</a></li>
+            </ol>
+        </li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ol>
+</div>
+
+<h2 id="executive-summary">Executive Summary</h2>
+
+<p>Weather Forecast Pro is a modern, full-featured weather forecasting web application built with React 19, Vite, and Tailwind CSS. The application integrates with OpenWeatherMap API to provide real-time weather data, 5-day forecasts, advanced meteorological metrics, and interactive visualization with smooth animations using Framer Motion. This survey provides a comprehensive technical analysis of the application's architecture, technologies, features, and implementation patterns.</p>
+
+<h2 id="introduction">Introduction and Purpose</h2>
+
+<h3 id="app-overview">Application Overview</h3>
+
+<p>Weather Forecast Pro is a progressive web application designed to deliver accurate, real-time weather information with an intuitive and visually appealing interface. The application addresses the need for accessible weather forecasting with advanced features beyond basic temperature displays, including:</p>
+
+<ul>
+    <li>Real-time weather conditions with visual representations</li>
+    <li>Multi-day forecast projections</li>
+    <li>Advanced meteorological metrics (UV index, precipitation probability, visibility)</li>
+    <li>Interactive maps with weather radar overlays</li>
+    <li>Temperature trend visualization</li>
+    <li>Persistent user preferences and favorites</li>
+</ul>
+
+<h3 id="target-users">Target Users</h3>
+
+<ul>
+    <li>General weather enthusiasts seeking quick weather information</li>
+    <li>Users requiring detailed weather metrics for planning</li>
+    <li>Mobile users requiring responsive, accessible weather data</li>
+    <li>Users in regions requiring multi-unit support (Celsius/Fahrenheit, metric/imperial)</li>
+</ul>
+
+<h2 id="tech-stack">Technology Stack and Architecture</h2>
+
+<h3 id="core-framework">Core Framework and Build Tools</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Component</th>
+            <th>Version</th>
+            <th>Justification</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>React</td>
+            <td>19.2.4</td>
+            <td>Modern declarative UI framework with Concurrent features</td>
+        </tr>
+        <tr>
+            <td>Vite</td>
+            <td>8.0.4</td>
+            <td>Fast ES module-based build tool with HMR (Hot Module Replacement)</td>
+        </tr>
+        <tr>
+            <td>TypeScript</td>
+            <td>N/A</td>
+            <td>JavaScript used; optional type support available via JSDoc</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Architectural Decision:</strong> The use of Vite as the build tool provides several advantages over traditional bundlers:</p>
+
+<ul>
+    <li>Instant module serving during development via native ESM</li>
+    <li>Fast build times through optimized dependency pre-bundling</li>
+    <li>Native CSS processing with PostCSS integration</li>
+    <li>Plugin-based extensibility</li>
+</ul>
+
+<h3 id="styling-framework">Styling Framework</h3>
+
+<p><strong>Tailwind CSS 3.4.19</strong> - Utility-first CSS framework with:</p>
+
+<ul>
+    <li>PostCSS 8.5.10 for CSS transformation</li>
+    <li>Autoprefixer 10.5.0 for vendor prefix generation</li>
+    <li>Custom extensions for glassmorphism effects</li>
+    <li>Responsive design with mobile-first approach</li>
+</ul>
+
+<p><strong>Custom CSS Enhancements:</strong></p>
+
+<pre><code class="code">.glass-card: Glassmorphism effect with backdrop blur
+.float: Infinite 3-second vertical animation</code></pre>
+
+<p><strong>Design Pattern:</strong> Glassmorphism (frosted glass effect) provides modern aesthetic with:</p>
+
+<ul>
+    <li>Backdrop blur effects for depth perception</li>
+    <li>Semi-transparent backgrounds</li>
+    <li>Readability enhancement through overlay</li>
+</ul>
+
+<h3 id="visualization-libs">Visualization Libraries</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Library</th>
+            <th>Version</th>
+            <th>Purpose</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Framer Motion</td>
+            <td>12.38.0</td>
+            <td>Component animations and page transitions</td>
+        </tr>
+        <tr>
+            <td>Recharts</td>
+            <td>3.8.1</td>
+            <td>Temperature trend charting and visualization</td>
+        </tr>
+        <tr>
+            <td>React Leaflet</td>
+            <td>5.0.0</td>
+            <td>React wrapper for Leaflet mapping library</td>
+        </tr>
+        <tr>
+            <td>Leaflet</td>
+            <td>1.9.4</td>
+            <td>Interactive map library for weather radar overlay</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Visualization Strategy:</strong></p>
+
+<ul>
+    <li>Framer Motion handles all UI animations with microsecond precision</li>
+    <li>Recharts provides responsive, interactive data visualization</li>
+    <li>Leaflet enables geospatial data representation with custom tile layers</li>
+</ul>
+
+<h3 id="code-quality">Code Quality Tools</h3>
+
+<p><strong>ESLint 9.39.4</strong> with plugins:</p>
+
+<ul>
+    <li>@eslint/js: Core JavaScript rules</li>
+    <li>eslint-plugin-react: React-specific linting</li>
+    <li>eslint-plugin-react-hooks: Hook usage validation</li>
+    <li>eslint-plugin-react-refresh: Fast refresh compatibility</li>
+</ul>
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<h3 id="high-level-arch">High-Level Architecture Diagram</h3>
+
+<pre><code>┌─────────────────────────────────────────────────────────┐
+│                    Browser (Client)                      │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │            React Application Layer                │ │
+│  │                   (App.jsx)                       │ │
+│  │                                                    │ │
+│  │  ┌──────────────────────────────────────────────┐ │ │
+│  │  │      WeatherPage.jsx (Orchestrator)         │ │ │
+│  │  │  - State Management (units, favorites)      │ │ │
+│  │  │  - Tab Management (overview/radar/trends)   │ │ │
+│  │  │  - Error Handling                            │ │ │
+│  │  └──────────────────────────────────────────────┘ │ │
+│  │           │              │              │          │ │
+│  │    ┌──────▼──────┐  ┌───▼───┐  ┌──────▼──────┐   │ │
+│  │    │ SearchBar   │  │Toggles│  │  Favorites  │   │ │
+│  │    │ & Location  │  │ Units │  │   List      │   │ │
+│  │    └──────┬──────┘  └───┬───┘  └──────┬──────┘   │ │
+│  │           │              │              │          │ │
+│  │    ┌──────▼──────────────▼──────────────▼──────┐  │ │
+│  │    │         useWeather Hook                    │  │ │
+│  │    │  - Weather data state management           │  │ │
+│  │    │  - API calls orchestration                 │  │ │
+│  │    │  - Error handling                          │  │ │
+│  │    └──────┬───────────────────────────┬─────────┘  │ │
+│  │           │                           │            │ │
+│  │    ┌──────▼──────┐            ┌──────▼──────┐    │ │
+│  │    │ WeatherCard │            │ForecastList │    │ │
+│  │    │ (Current)   │            │ (5-Day)     │    │ │
+│  │    └─────────────┘            └─────────────┘    │ │
+│  │                                                    │ │
+│  │    ┌──────────────────────────────────────────┐  │ │
+│  │    │    Advanced Components (Lazy-Loaded)     │  │ │
+│  │    │  - TemperatureChart (24-hour trend)      │  │ │
+│  │    │  - WeatherRadarMap (Interactive map)     │  │ │
+│  │    │  - HighlightsCard (Advanced metrics)     │  │ │
+│  │    └──────────────────────────────────────────┘  │ │
+│  │                                                    │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                           │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │           Browser APIs & Storage                  │ │
+│  │  - Geolocation API (GPS)                          │ │
+│  │  - localStorage (Favorites, Units)               │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                           │
+└──────────────────────┬──────────────────────────────────┘
+                       │ HTTPS
+        ┌──────────────▼──────────────┐
+        │  OpenWeatherMap API         │
+        │  - Weather Data Endpoints   │
+        │  - Forecast Data            │
+        │  - Advanced Metrics (OneCall)│
+        │  - Map Tiles (Radar)        │
+        └─────────────────────────────┘</code></pre>
+
+<h3 id="component-arch">Component Architecture</h3>
+
+<p><strong>Component Hierarchy:</strong></p>
+
+<pre><code>App (Root)
+└── WeatherPage (Main Container & State)
+    ├── SearchBar (Input + Geolocation)
+    ├── UnitToggle (C°/F° Switcher)
+    ├── ErrorAlert (Error Display)
+    ├── LoadingSpinner (Loading State)
+    ├── WeatherCard (Current Weather Display)
+    ├── ForecastList (5-Day Forecast Container)
+    │   └── ForecastCard[] (Individual Days)
+    ├── HighlightsCard (Advanced Metrics)
+    ├── TemperatureChart (Lazy-Loaded, 24-hour Trend)
+    ├── WeatherRadarMap (Lazy-Loaded, Interactive Map)
+    └── FavoritesList (Saved Cities)</code></pre>
+
+<h3 id="data-flow">Data Flow Architecture</h3>
+
+<p><strong>Unidirectional Data Flow Pattern:</strong></p>
+
+<pre><code>User Input (SearchBar/Geolocation)
+        │
+        ▼
+WeatherPage State Updates
+        │
+        ▼
+useWeather Hook (fetchCurrentWeather + fetchForecast)
+        │
+        ▼
+weatherApi.js (API Call Layer)
+        │
+        ▼
+OpenWeatherMap API
+        │
+        ▼
+Response Processing (weatherHelpers.js)
+        │
+        ▼
+State Updates (weather, forecast, highlights)
+        │
+        ▼
+Component Re-renders
+        │
+        ▼
+UI Display Update</code></pre>
+
+<h2 id="api-integration">API Integration and Data Management</h2>
+
+<h3 id="openweather-api">OpenWeatherMap API Integration</h3>
+
+<p><strong>API Endpoints Used:</strong></p>
+
+<pre><code>Base: https://api.openweathermap.org/data/2.5
+OneCall: https://api.openweathermap.org/data/3.0
+Maps: https://tile.openweathermap.org/map
+Icons: https://openweathermap.org/img/wn</code></pre>
+
+<h3 id="api-functions">API Functions and Data Structure</h3>
+
+<p><strong>Current Weather Endpoint:</strong></p>
+
+<pre><code>GET /weather?q={city}&units={units}&appid={key}
+GET /weather?lat={lat}&lon={lon}&units={units}&appid={key}</code></pre>
+
+<p>Returns: Current temperature, conditions, humidity, wind speed, icons</p>
+
+<p><strong>Forecast Endpoint:</strong></p>
+
+<pre><code>GET /forecast?q={city}&units={units}&appid={key}
+GET /forecast?lat={lat}&lon={lon}&units={units}&appid={key}</code></pre>
+
+<p>Returns: 40 items (5 days × 8 forecasts per day, 3-hour intervals)</p>
+
+<p><strong>OneCall Endpoint:</strong></p>
+
+<pre><code>GET /overview?lat={lat}&lon={lon}&units={units}&appid={key}</code></pre>
+
+<p>Returns: Advanced metrics including UV index, rain probability, detailed conditions</p>
+
+<h3 id="data-processing">Data Processing Pipeline</h3>
+
+<p><strong>Stage 1: Raw API Response</strong></p>
+
+<pre><code>{
+  "main": { "temp": 20.5, "humidity": 65 },
+  "weather": [{ "main": "Clear", "icon": "01d" }],
+  "wind": { "speed": 3.2 },
+  "clouds": { "all": 10 },
+  "visibility": 10000,
+  ...
+}</code></pre>
+
+<p><strong>Stage 2: Transformation (weatherHelpers.js)</strong></p>
+
+<ul>
+    <li>Round temperatures: <code class="code">20.5°C → 21°C</code></li>
+    <li>Convert visibility: <code class="code">10000m → 10km</code> (metric) or <code class="code">6.2mi</code> (imperial)</li>
+    <li>Format dates with timezone offset</li>
+    <li>Categorize UV index</li>
+    <li>Calculate rain probability averages</li>
+</ul>
+
+<p><strong>Stage 3: Application State</strong></p>
+
+<pre><code>{
+  weather: { temp, feelsLike, humidity, windSpeed, description, icon },
+  forecast: [{ day, minTemp, maxTemp, precipitation }, ...],
+  highlights: { rainProbability, uvIndex, visibility, pressure },
+  temperatureTrend: [{ time, temp, feelsLike }, ...],
+  radarTileUrl: "https://tile.openweathermap.org/..."
+}</code></pre>
+
+<h2 id="state-management">State Management Strategy</h2>
+
+<h3 id="state-distribution">State Distribution</h3>
+
+<p><strong>React Hooks (No Redux/Zustand):</strong></p>
+
+<p><strong>WeatherPage.jsx:</strong></p>
+
+<ul>
+    <li><code class="code">unit</code> (C/F preference) - persisted in localStorage</li>
+    <li><code class="code">favorites</code> (saved cities) - persisted in localStorage</li>
+    <li><code class="code">infoMessage</code> (user notifications)</li>
+    <li><code class="code">activeTab</code> (view selection)</li>
+</ul>
+
+<p><strong>useWeather Hook:</strong></p>
+
+<ul>
+    <li><code class="code">weather</code> - current conditions object</li>
+    <li><code class="code">forecast</code> - 5-day array</li>
+    <li><code class="code">loading</code> - boolean loading state</li>
+    <li><code class="code">error</code> - error message string</li>
+    <li><code class="code">highlights</code> - advanced metrics object</li>
+    <li><code class="code">temperatureTrend</code> - 24-hour trend array</li>
+    <li><code class="code">radarTileUrl</code> - map tile URL string</li>
+</ul>
+
+<p><strong>useLocalStorage Hook:</strong></p>
+
+<ul>
+    <li>Automatic JSON serialization/deserialization</li>
+    <li>Error recovery for corrupted data</li>
+    <li>Sync mechanism with localStorage automatically</li>
+</ul>
+
+<h3 id="state-persistence">State Persistence</h3>
+
+<p><strong>localStorage Keys:</strong></p>
+
+<pre><code>'weather.favorite.cities'   // Array of favorite city objects
+'weather.temperature.unit'  // 'metric' or 'imperial'</code></pre>
+
+<p><strong>Persistence Mechanism:</strong></p>
+
+<ul>
+    <li>useLocalStorage hook automatically syncs state changes</li>
+    <li>Recovery mechanism for corrupted data with fallback defaults</li>
+    <li>No additional state management library overhead</li>
+</ul>
+
+<h2 id="ui-design">User Interface and Design</h2>
+
+<h3 id="design-system">Design System</h3>
+
+<p><strong>Visual Design Pattern: Glassmorphism</strong></p>
+
+<ul>
+    <li>Semi-transparent cards with backdrop blur</li>
+    <li>Gradient backgrounds responsive to weather conditions</li>
+    <li>Smooth transitions (700ms) between states</li>
+    <li>Hover states with subtle lift animations</li>
+</ul>
+
+<p><strong>Dynamic Backgrounds by Weather Condition:</strong></p>
+
+<pre><code>Night:        "from-slate-950 via-indigo-950 to-slate-900"
+Rain:         "from-slate-700 via-blue-700 to-cyan-700"
+Thunderstorm: "from-slate-900 via-purple-900 to-slate-700"
+Snow:         "from-sky-200 via-slate-300 to-sky-400"
+Clouds:       "from-slate-600 via-gray-600 to-slate-800"
+Clear/Sunny:  "from-sky-500 via-indigo-500 to-purple-600"</code></pre>
+
+<h3 id="responsive-design">Responsive Design</h3>
+
+<p><strong>Mobile-First Approach:</strong></p>
+
+<ul>
+    <li>Base styles for mobile (default)</li>
+    <li><code class="code">sm:</code>, <code class="code">lg:</code>, <code class="code">xl:</code> breakpoints via Tailwind</li>
+    <li>Flex layouts for responsive stacking</li>
+    <li>Grid layouts for multi-column content on desktop</li>
+    <li>Overflow handling with scrollable sections</li>
+</ul>
+
+<h3 id="animation-strategy">Animation Strategy</h3>
+
+<p><strong>Framer Motion Animations:</strong></p>
+
+<ul>
+    <li>Page entrance: 450ms fade-in with slide</li>
+    <li>Card hover: Subtle lift (Y: -4px) with shadow increase</li>
+    <li>Loading spinner: Continuous rotation animation</li>
+    <li>Weather icons: Floating animation (3s cycle)</li>
+    <li>Tab transitions: Cross-fade between views</li>
+</ul>
+
+<p><strong>Performance Impact:</strong></p>
+
+<ul>
+    <li>GPU-accelerated transforms (<code class="code">translateY</code>, <code class="code">scale</code>)</li>
+    <li><code class="code">will-change</code> CSS for animation optimization</li>
+    <li>Lazy loading of animation-heavy components</li>
+</ul>
+
+<h2 id="advanced-features">Advanced Features</h2>
+
+<h3 id="geolocation">Geolocation Integration</h3>
+
+<p><strong>Implementation:</strong></p>
+
+<pre><code>navigator.geolocation.getCurrentPosition(
+  (position) => loadByCoords(lat, lon, units),
+  (error) => fallbackToDefaultCity(),
+  { enableHighAccuracy: true, timeout: 10000 }
+)</code></pre>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+    <li>High accuracy mode enabled</li>
+    <li>10-second timeout with fallback</li>
+    <li>User permission handling</li>
+    <li>Graceful degradation to default city (London)</li>
+</ul>
+
+<h3 id="lazy-loading">Lazy Loading Strategy</h3>
+
+<p><strong>Components Lazy-Loaded:</strong></p>
+
+<ol>
+    <li><strong>TemperatureChart</strong> - Recharts library (significant bundle size)</li>
+    <li><strong>WeatherRadarMap</strong> - Leaflet + React Leaflet (heavy mapping library)</li>
+</ol>
+
+<p><strong>Implementation:</strong></p>
+
+<pre><code>const TemperatureChart = lazy(() => import('./components/TemperatureChart'));
+&lt;Suspense fallback={&lt;LoadingSpinner /&gt;}&gt;
+  &lt;TemperatureChart /&gt;
+&lt;/Suspense&gt;</code></pre>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+    <li>Reduced initial bundle size</li>
+    <li>Faster Time-to-Interactive (TTI)</li>
+    <li>On-demand loading of heavy libraries</li>
+    <li>Graceful loading feedback</li>
+</ul>
+
+<h3 id="radar-map">Interactive Radar Map</h3>
+
+<p><strong>Technology Stack:</strong></p>
+
+<ul>
+    <li>OpenStreetMap (base layer)</li>
+    <li>OpenWeatherMap Precipitation Radar (overlay)</li>
+    <li>Dynamic tile URL generation</li>
+    <li>Leaflet with React bindings</li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+    <li>Centered on selected city</li>
+    <li>Zoom level 6 (city-region view)</li>
+    <li>Real-time precipitation overlay</li>
+    <li>Interactive pan and zoom</li>
+</ul>
+
+<h3 id="temp-trend">24-Hour Temperature Trend</h3>
+
+<p><strong>Data Source:</strong></p>
+
+<ul>
+    <li>40 forecast data points (3-hour intervals)</li>
+    <li>Aggregated into 8 time points (every 3 hours)</li>
+    <li>Includes actual temp + "feels like" comparison</li>
+</ul>
+
+<p><strong>Visualization:</strong></p>
+
+<ul>
+    <li>Recharts LineChart component</li>
+    <li>Dual-axis for comparison</li>
+    <li>Interactive tooltip on hover</li>
+    <li>Responsive sizing</li>
+</ul>
+
+<h3 id="advanced-metrics">Advanced Metrics Display</h3>
+
+<p><strong>Metrics Calculated:</strong></p>
+
+<ol>
+    <li><strong>Rain Probability</strong> - Average of precipitation probability over next 24 hours</li>
+    <li><strong>UV Index</strong> - From OneCall API, categorized (Low/Moderate/High/Very High/Extreme)</li>
+    <li><strong>Visibility</strong> - Converted to km (metric) or miles (imperial)</li>
+    <li><strong>Atmospheric Pressure</strong> - From current weather data</li>
+</ol>
+
+<p><strong>Error Handling:</strong></p>
+
+<ul>
+    <li>Graceful "N/A" display if metric unavailable</li>
+    <li>Sequential OneCall API call (fails silently if API limits reached)</li>
+</ul>
+
+<h2 id="performance">Performance Optimizations</h2>
+
+<h3 id="rendering-opt">Rendering Optimizations</h3>
+
+<p><strong>useMemo Hook:</strong></p>
+
+<pre><code>const gradientClass = useMemo(
+  () => getGradientClassName(weather.main, weather.icon),
+  [weather.main, weather.icon]
+);</code></pre>
+
+<ul>
+    <li>Prevents unnecessary recalculation of gradient backgrounds</li>
+    <li>Dependency array ensures updates only when weather changes</li>
+</ul>
+
+<p><strong>useCallback Hook:</strong></p>
+
+<pre><code>const handleCitySearch = useCallback((city) => {
+  loadByCity(city, unit);
+}, [loadByCity, unit]);</code></pre>
+
+<ul>
+    <li>Stable function references for child components</li>
+    <li>Prevents unnecessary child re-renders</li>
+</ul>
+
+<h3 id="bundle-opt">Bundle Optimization</h3>
+
+<p><strong>Code Splitting:</strong></p>
+
+<ul>
+    <li>React.lazy() for TemperatureChart and WeatherRadarMap</li>
+    <li>Vite's automatic chunk splitting</li>
+    <li>Separate vendor chunk for node_modules</li>
+</ul>
+
+<p><strong>Expected Bundle Analysis:</strong></p>
+
+<ul>
+    <li>React + React DOM: ~40KB (gzipped)</li>
+    <li>Tailwind CSS: ~25KB (gzipped)</li>
+    <li>Framer Motion: ~30KB (gzipped)</li>
+    <li>Recharts: ~45KB (gzipped)</li>
+    <li>Leaflet + React Leaflet: ~60KB (gzipped)</li>
+    <li>Application code: ~20KB (gzipped)</li>
+    <li><strong>Total: ~220KB (gzipped)</strong></li>
+</ul>
+
+<h3 id="network-opt">Network Optimizations</h3>
+
+<p><strong>Parallel API Calls:</strong></p>
+
+<pre><code>const [weatherData, forecastData] = await Promise.all([
+  fetchCurrentWeatherByCity(city, units),
+  fetchForecastByCity(city, units)
+]);</code></pre>
+
+<ul>
+    <li>Concurrent requests reduce total API latency</li>
+    <li>Promise.all() ensures both complete before state update</li>
+</ul>
+
+<p><strong>Conditional Advanced Metrics:</strong></p>
+
+<pre><code>try {
+  const advancedData = await fetchOneCallByCoords(...);
+  // Process additional data
+} catch {
+  // Gracefully continue without advanced metrics
+}</code></pre>
+
+<ul>
+    <li>Advanced metrics fetch sequentially (non-blocking)</li>
+    <li>Failure doesn't prevent core functionality</li>
+</ul>
+
+<h2 id="accessibility">Accessibility Features</h2>
+
+<h3 id="semantic-html">Semantic HTML</h3>
+
+<pre><code>&lt;main&gt;
+  &lt;section&gt;...&lt;/section&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;</code></pre>
+
+<h3 id="aria-attributes">ARIA Attributes</h3>
+
+<pre><code>&lt;button aria-label="Search weather by city name"&gt;Search&lt;/button&gt;
+&lt;div role="status" aria-live="polite"&gt;{loading && "Loading..."}&lt;/div&gt;</code></pre>
+
+<h3 id="visual-accessibility">Visual Accessibility</h3>
+
+<ul>
+    <li>Color contrast ratios meeting WCAG AA standards</li>
+    <li>Focus indicators for keyboard navigation</li>
+    <li>Screen reader support via semantic elements</li>
+    <li>Alt text for weather icons</li>
+</ul>
+
+<h3 id="keyboard-nav">Keyboard Navigation</h3>
+
+<ul>
+    <li>Tab order follows logical flow</li>
+    <li>Enter key support for forms</li>
+    <li>Esc key for modal closures (if implemented)</li>
+</ul>
+
+<h2 id="error-handling">Error Handling and Resilience</h2>
+
+<h3 id="error-types">Error Types and Handling</h3>
+
+<p><strong>API Errors:</strong></p>
+
+<pre><code>try {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return await response.json();
+} catch (error) {
+  setError(`Failed to fetch weather: ${error.message}`);
+}</code></pre>
+
+<p><strong>Network Errors:</strong></p>
+
+<ul>
+    <li>Timeout handling (implicit via fetch timeout)</li>
+    <li>Graceful degradation with cached data</li>
+    <li>User-friendly error messages</li>
+</ul>
+
+<p><strong>Validation Errors:</strong></p>
+
+<ul>
+    <li>Empty city input validation</li>
+    <li>Invalid coordinates handling</li>
+    <li>API key validation</li>
+</ul>
+
+<h3 id="error-messages">Error Messages</h3>
+
+<ul>
+    <li>"City not found. Please try another search."</li>
+    <li>"Unable to get your location. Using default city."</li>
+    <li>"Failed to fetch weather data. Please try again."</li>
+    <li>"Failed to load advanced weather metrics."</li>
+</ul>
+
+<h2 id="development">Development and Deployment</h2>
+
+<h3 id="build-process">Build Process</h3>
+
+<p><strong>Development:</strong></p>
+
+<pre><code>npm run dev
+# Starts Vite dev server with HMR on http://localhost:5173
+# Hot module replacement for instant feedback</code></pre>
+
+<p><strong>Production:</strong></p>
+
+<pre><code>npm run build
+# Output: dist/ directory with optimized bundle
+# Minification, tree-shaking, code splitting applied</code></pre>
+
+<h3 id="config-files">Configuration Files</h3>
+
+<p><strong>vite.config.js:</strong></p>
+
+<ul>
+    <li>React plugin with Fast Refresh</li>
+    <li>Alias configuration for imports</li>
+    <li>Environment variable loading</li>
+</ul>
+
+<p><strong>tailwind.config.js:</strong></p>
+
+<ul>
+    <li>Custom glass shadow effect</li>
+    <li>Float animation definition</li>
+    <li>Content path configuration</li>
+</ul>
+
+<p><strong>postcss.config.js:</strong></p>
+
+<ul>
+    <li>Tailwind CSS integration</li>
+    <li>Autoprefixer for vendor prefixes</li>
+</ul>
+
+<p><strong>eslint.config.js:</strong></p>
+
+<ul>
+    <li>React and React Hooks plugins</li>
+    <li>React Refresh warning level configuration</li>
+    <li>Shared config extension</li>
+</ul>
+
+<h2 id="security">Security Considerations</h2>
+
+<h3 id="api-key-mgmt">API Key Management</h3>
+
+<pre><code>const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+// Validation in getApiKey() function
+if (!API_KEY) throw new Error("Weather API key not configured");</code></pre>
+
+<p><strong>Best Practices:</strong></p>
+
+<ul>
+    <li>Stored in <code class="code">.env.local</code> (not version controlled)</li>
+    <li>Validated before each request</li>
+    <li>Consider server-side proxy for production (avoid exposing key)</li>
+</ul>
+
+<h3 id="input-validation">Input Validation</h3>
+
+<ul>
+    <li>City search input sanitization</li>
+    <li>Coordinates range validation (lat: -90 to 90, lon: -180 to 180)</li>
+    <li>Data type checking before state updates</li>
+</ul>
+
+<h3 id="xss-prevention">XSS Prevention</h3>
+
+<ul>
+    <li>React's built-in JSX escaping</li>
+    <li>No <code class="code">dangerouslySetInnerHTML</code> usage</li>
+    <li>Template literals safe from injection</li>
+</ul>
+
+<h2 id="browser-compatibility">Browser Compatibility and Support</h2>
+
+<h3 id="target-browsers">Target Browsers</h3>
+
+<ul>
+    <li>Chrome/Edge 90+</li>
+    <li>Firefox 88+</li>
+    <li>Safari 14+</li>
+    <li>Mobile browsers (iOS Safari, Chrome Android)</li>
+</ul>
+
+<h3 id="tech-requirements">Technology Requirements</h3>
+
+<ul>
+    <li>ES2020 JavaScript support (async/await, optional chaining)</li>
+    <li>CSS Grid and Flexbox support</li>
+    <li>Geolocation API support</li>
+    <li>localStorage support</li>
+    <li>Fetch API support</li>
+</ul>
+
+<h3 id="polyfills">Polyfills</h3>
+
+<ul>
+    <li>None required for target browsers</li>
+    <li>Vite automatically transpiles to supported ES version</li>
+</ul>
+
+<h2 id="testing-strategy">Testing Strategy (Recommended)</h2>
+
+<h3 id="unit-testing">Unit Testing</h3>
+
+<ul>
+    <li><strong>Framework:</strong> Vitest (lightweight, Vite-native)</li>
+    <li><strong>Components to test:</strong>
+        <ul>
+            <li><code class="code">weatherHelpers.js</code> utility functions</li>
+            <li><code class="code">useWeather</code> hook logic</li>
+            <li><code class="code">useLocalStorage</code> hook</li>
+        </ul>
+    </li>
+</ul>
+
+<h3 id="integration-testing">Integration Testing</h3>
+
+<ul>
+    <li><strong>Tools:</strong> React Testing Library</li>
+    <li><strong>Test cases:</strong>
+        <ul>
+            <li>City search flow</li>
+            <li>Geolocation flow</li>
+            <li>Unit toggle functionality</li>
+            <li>Favorite management</li>
+        </ul>
+    </li>
+</ul>
+
+<h3 id="e2e-testing">E2E Testing</h3>
+
+<ul>
+    <li><strong>Tools:</strong> Playwright or Cypress</li>
+    <li><strong>User journeys:</strong>
+        <ul>
+            <li>Search weather by city</li>
+            <li>Toggle temperature units</li>
+            <li>Add/remove favorites</li>
+            <li>Switch between tabs</li>
+        </ul>
+    </li>
+</ul>
+
+<h2 id="future-enhancements">Future Enhancement Opportunities</h2>
+
+<h3 id="feature-enhancements">Feature Enhancements</h3>
+
+<ol>
+    <li><strong>Weather Alerts</strong> - Severe weather notifications</li>
+    <li><strong>Historical Data</strong> - Past weather records</li>
+    <li><strong>Air Quality Index (AQI)</strong> - Pollution levels</li>
+    <li><strong>Severe Weather Map</strong> - Storm tracking</li>
+    <li><strong>Hourly Forecast</strong> - Detailed 48-hour view</li>
+    <li><strong>Multi-Language Support</strong> - i18n integration</li>
+    <li><strong>Dark/Light Mode Toggle</strong> - Theme switching</li>
+    <li><strong>PWA Features</strong> - Offline support, app installation</li>
+</ol>
+
+<h3 id="performance-enhancements">Performance Enhancements</h3>
+
+<ol>
+    <li><strong>Service Workers</strong> - Offline caching</li>
+    <li><strong>Image Optimization</strong> - WebP format support</li>
+    <li><strong>Virtualization</strong> - Long list optimization</li>
+    <li><strong>Memoization</strong> - React.memo for components</li>
+    <li><strong>Code Splitting</strong> - Route-based splitting with React Router</li>
+</ol>
+
+<h3 id="architecture-improvements">Architecture Improvements</h3>
+
+<ol>
+    <li><strong>TypeScript Migration</strong> - Type safety</li>
+    <li><strong>State Management</strong> - Zustand/Jotai for complex state</li>
+    <li><strong>Component Library</strong> - Storybook integration</li>
+    <li><strong>Testing Suite</strong> - Comprehensive test coverage</li>
+    <li><strong>Analytics</strong> - User behavior tracking</li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Weather Forecast Pro demonstrates a well-architected, modern React application combining best practices in UI design, API integration, state management, and user experience. The application effectively utilizes contemporary web technologies (React 19, Vite, Tailwind CSS, Framer Motion) to deliver a responsive, performant, and visually appealing weather forecasting experience.</p>
+
+<p><strong>Key Strengths:</strong></p>
+
+<ul>
+    <li>Clean component hierarchy with clear separation of concerns</li>
+    <li>Efficient state management without external libraries</li>
+    <li>Comprehensive API integration with graceful error handling</li>
+    <li>Modern UI design with glassmorphism aesthetic</li>
+    <li>Responsive design supporting mobile to desktop</li>
+    <li>Performance optimizations through lazy loading and memoization</li>
+    <li>Accessibility considerations throughout</li>
+</ul>
+
+<p><strong>Technical Excellence:</strong></p>
+
+<ul>
+    <li>Production-ready build configuration</li>
+    <li>Linting and code quality standards</li>
+    <li>Multiple visualization approaches (charts, maps, cards)</li>
+    <li>Browser geolocation integration</li>
+    <li>Dynamic theming based on weather conditions</li>
+</ul>
+
+<p>The application serves as a solid foundation for further enhancement and demonstrates professional full-stack JavaScript development practices.</p>
+
+<div class="center">
+    <p><strong>Document Version:</strong> 1.0</p>
+    <p><strong>Date:</strong> April 18, 2026</p>
+    <p><strong>Application:</strong> Weather Forecast Pro v0.0.0</p>
+</div>
+
+</body>
+</html>

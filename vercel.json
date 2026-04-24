@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/weather", "destination": "/api/weather" },
+    { "source": "/weather/by-coords", "destination": "/api/weather/by-coords" },
+    { "source": "/decision-ai", "destination": "/api/decision-ai" },
+    { "source": "/ai-insights", "destination": "/api/ai-insights" },
+    { "source": "/compare-cities", "destination": "/api/compare-cities" },
+    { "source": "/packing", "destination": "/api/packing" },
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/trend-analysis", "destination": "/api/trend-analysis" },
+    { "source": "/micro-forecast", "destination": "/api/micro-forecast" },
+    { "source": "/city-suggestions", "destination": "/api/city-suggestions" },
+    { "source": "/reverse-geocode", "destination": "/api/reverse-geocode" }
+  ]
+}

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family:
+      'Inter',
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      Roboto,
+      sans-serif;
+    color: #f8fafc;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: radial-gradient(circle at top, #1e293b 0%, #020617 55%);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-xl border border-slate-700 bg-slate-900/90 shadow-lg;
+  }
+
+  .glass-card-soft {
+    @apply rounded-lg border border-slate-700 bg-slate-800/90;
+  }
+}
+
+#root {
+  min-height: 100vh;
+}
